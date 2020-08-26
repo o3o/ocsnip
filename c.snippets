@@ -1,0 +1,65 @@
+# ------------------
+# Language
+# ------------------
+snippet vd "void (vd)" w
+void
+endsnippet
+
+snippet ret "return (ret)" w
+return
+endsnippet
+
+snippet sz "size_t (sz)" w
+size_t ${0}
+endsnippet
+
+# ------------------
+# Branches
+# ------------------
+snippet ife "if .. else (ife)" b
+if (${1:/*condition*/}) {
+	${2:/*code*/}
+} else {
+	${3:/*else*/}
+}
+endsnippet
+
+snippet el "else (el)" w
+else {
+	${VISUAL}${1:/*code*/}
+}
+endsnippet
+
+snippet elif "else if (elif)" w
+else if (${1:/*condition*/}) {
+	${VISUAL}${0:/*code*/}
+}
+endsnippet
+
+# ------------------
+# Functions
+# ------------------
+snippet main "int main(args)" b
+int main(int argc, char *argv[]) {
+	${VISUAL}${0: /*code*/}
+	return 0;
+}
+endsnippet
+
+snippet maini "int main" b
+int main() {
+	${VISUAL}${0: /*code*/}
+	return 0;
+}
+endsnippet
+
+# ----------------
+# Type definitions
+# ----------------
+snippet ts "struct"
+typedef struct {
+   ${0:/* data */}
+} ${1:`!p snip.rv = (snip.basename or "name") + "_t"`};
+endsnippet
+
+
