@@ -62,4 +62,30 @@ typedef struct {
 } ${1:`!p snip.rv = (snip.basename or "name") + "_t"`};
 endsnippet
 
+# ------------------
+# Doxy and comments
+# ------------------
+snippet sdoc "short ddoc block (sdoc)" b
+/**
+ * ${1:description}
+ */
+endsnippet
+
+snippet doc "generic ddoc block (doc)" b
+/**
+ * ${1:description}
+ *
+ * ${2:details}
+ */
+endsnippet
+
+snippet par "param" b
+ * \param ${1:par}
+ * ${2}
+endsnippet
+
+snippet aut "author" b
+ * \author ${1:aut}
+ * ${2}
+endsnippet
 
