@@ -65,13 +65,13 @@ endsnippet
 # ------------------
 # Doxy and comments
 # ------------------
-snippet sdoc "short ddoc block (sdoc)" b
+snippet sdoc "short doxy block (sdoc)" b
 /**
  * ${1:description}
  */
 endsnippet
 
-snippet doc "generic ddoc block (doc)" b
+snippet doc "generic doxy block (doc)" b
 /**
  * ${1:description}
  *
@@ -80,12 +80,14 @@ snippet doc "generic ddoc block (doc)" b
 endsnippet
 
 snippet par "param"
- * \param ${1:par}
- * ${2}
+\param ${1:par}
 endsnippet
 
 snippet aut "author"
- * \author ${1:aut}
- * ${2}
+\author ${1:aut}
+endsnippet
+
+snippet returns "returns"
+\return ${1:aut}
 endsnippet
 
